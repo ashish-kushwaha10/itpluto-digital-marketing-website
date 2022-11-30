@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel="shortcut icon" type="image" href="image/adbigo-fav1.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>AdBigO</title>
+
+    <style>
+        .portfolio-wrapper {
+            margin: 100px auto;
+            max-width: 1100px;
+        }
+
+        .portfolio-wrapper section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .portfolio-wrapper .items {
+            display: flex;
+            max-width: 720px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .items span {
+            padding: 5px 15px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #007bff;
+            border-radius: 50px;
+            border: 2px solid #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .items span.active,
+        .items span:hover {
+            color: #fff;
+            background: #007bff;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .gallery .image {
+            width: calc(100% / 4);
+            padding: 7px;
+        }
+
+        .connecting-link {
+            position: relative;
+        }
+
+        .connecting-link a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .gallery .image span {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .gallery .image img {
+            width: 100%;
+            vertical-align: middle;
+            transition: all 0.3s ease;
+        }
+
+        .gallery .image:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery .image.hide {
+            display: none;
+        }
+
+        .gallery .image.show {
+            animation: animate 0.4s ease;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+
+        @media (max-width: 1000px) {
+            .gallery .image {
+                width: calc(100% / 3);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .gallery .image {
+                width: calc(100% / 2);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .portfolio-wrapper section .items {
+                max-width: 600px;
+            }
+
+            section .items span {
+                padding: 7px 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-wrapper {
+                margin: 30px auto;
+            }
+
+            .portfolio-wrapper section .items {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            section .items span {
+                margin: 5px;
+            }
+
+            .gallery .image {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+        <!-- top information -->
+        <div class="top-info ">
+            <div>
+                <p> <i class="bi bi-envelope-fill p-1"></i>contact@ITpluto.com</p>
+            </div>
+            <div>
+                <ul class="num">
+                    <li><a href=""><img src="image/america.jpg" width="25px" height="15px" alt=""> +1(7000)-074-033 </a>
+                    </li>
+                    <li><a href=""><img src="image/india.jpg" width="25px" height="15px" alt=""> +91(896)-684-7002 </a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    
+        <!-- nav bar  -->
+        <nav class="nunito-font">
+            <div class="wrapper">
+                <a href="index.html"><img src="image/ITpluto logo.png" class="logo" alt=""></a>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+    
+                    <li><a href="index.html"><b>Home</b></a></li>
+    
+                    <li>
+                        <a href="#" class="desktop-item"><b> About</b></a>
+                        <input type="checkbox" id="showDrop">
+                        <label for="showDrop" class="mobile-item"><b> About</b></label>
+                        <ul class="drop-menu">
+                            <li><a href="whyChooseUs.html">Why Choose Us</a></li>                       
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                           
+                        </ul>
+                    </li>
+    
+    
+    
+                    <li>
+                        <a class="desktop-item"><b> Services</b></a>
+                        <input type="checkbox" id="showMega">
+                        <label for="showMega" class="mobile-item"><b> Services</b></label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <img src="image/best digital marketing services adbigo 2.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="row">
+                                    <header>Development & maintenance</header>
+                                    <ul class="mega-links">
+                                        <li><a href="web-dev.html">Web Development </a></li>
+                                        <li><a href="app-dev.html">App Development</a></li>
+                                        <li><a href="ecommerce.html">E-commerce Services</a></li>
+                                    </ul>
+                                </div>
+    
+                                <div class="row">
+                                    <header>Digital Marketing</header>
+                                    <ul class="mega-links">
+                                        <li><a href="smm.html">Social Media Marketing</a></li>
+                                        <li><a href="seo.html">SEO Services</a></li>
+                                        <li><a href="sem.html">SEM Services</a></li>
+                                    </ul>
+                                </div>
+    
+                                <div class="row">
+                                    <header>Other Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="graphics.html">Graphics Design</a></li>
+                                        <li><a href="video.html">Video Production</a></li>
+                                        <li><a href="bulk.html">Bulk Marketing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+    
+                    <li><a href="branding.html"><b>Branding</b></a></li>
+                    <li><a href="portfolio.html"><b>Portfolio</b></a></li>
+                    <li><a href="index.php"><b>Blogs</b></a></li>
+                    <li><a href="contact.html"><b>Contact Us</b></a></li>
+                    <a class="top-btn01" href=""><button><b> Get Started</b></button></a>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+
+
+
+    <div id="video-head-page" class="container-fluid head-img-size">
+        <h1 class="header-page-text"><b>Our Work</b></h1>
+    </div>
+
+
+    <br><br>
+
+
+
+
+    <!--section5  -->
+    <div class="container-fluid par-set">
+        <div class="row  justify-content-center  ">
+
+            <div class="col-11 col-lg-7 d-none d-lg-block ">
+                <div class="row justify-content-evenly">
+                    <div class="col-5">
+                        <img src="image/digital_services.PNG" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="image/digital_services.PNG" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="image/digital_services.PNG" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="image/digital_services.PNG" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-11 col-lg-4">
+                <h2> We Offer a Full Range of
+                    <b>E-Commerce </b>Services!
+                </h2>
+                <br>
+
+                <p>In eCommerce, competition is Very high; the offers are short-lived and transparent for the user. As a
+                    website operator, you are therefore permanently faced with the challenge of monitoring the market
+                    and generating unique content with added value for the user on the ongoing new product pages. In
+                    doing so, you create competitive advantages for yourself while remaining visible in the search
+                    engines and for the user.
+
+                </p>
+
+            </div>
+
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-11 col-lg-9">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae aspernatur quia nisi omnis numquam,
+                    unde
+                    ducimus dignissimos dicta quisquam impedit temporibus est neque expedita natus? Non eveniet
+                    aspernatur sit
+                    tempora culpa, quasi recusandae eius mollitia officia repudiandae odio, veritatis atque dignissimos
+                    beatae
+                    delectus blanditiis autem natus? Eius iure quos impedit eligendi ut repellat, esse assumenda dolorum
+                    repudiandae alias accusantium voluptate et provident nemo iste enim error fugit. Nesciunt dolor
+                    distinctio
+                    beatae porro vero laudantium. Hic iure perspiciatis numquam veritatis quasi est dolor omnis?
+                    Consequatur
+                    laborum iste voluptatibus tempore quam cumque deleniti molestias nulla. Est ex, porro adipisci natus
+                    libero,
+                    amet mollitia cupiditate, fugiat dolorem id quos nesciunt ratione et assumenda! Veniam laudantium
+                    dolor
+                    optio earum nemo eaque excepturi ut quaerat ad, sed voluptatem totam explicabo sit eveniet numquam
+                    corrupti
+                    qui veritatis quasi soluta eos quidem mollitia et. Dolores magni velit amet, nam aspernatur debitis
+                    expedita
+                    rerum porro distinctio ut saepe modi. Minima et aspernatur modi accusamus fugiat aperiam vero? Nemo
+                    ipsum
+                    voluptatum quibusdam ex, sapiente, harum ipsam minus exercitationem magni temporibus minima quaerat
+                    voluptas
+                    sint repellat amet aut sunt a esse quas qui? Exercitationem unde expedita aperiam nam ex ducimus
+                    optio
+                    possimus! Atque animi dicta delectus inventore magnam ea sapiente?
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <br><br>
+
+
+
+    <br>
+
+    <div class="form-bg01">
+        <br><br>
+        <div class="container text-center ">
+            <div class="row d-flex justify-content-center">
+                <div class="col-11 col-lg-8">
+                    <h1><b> Achieve your marketing objectives today</b></h1> <br>
+                    <button style="background-color: #1a73e8; color: white;font-size: 17px; padding: 10px 24px;">Start
+                        now</button> <br><br>
+                    <p>Or book a free appointment with an Ads expert to get support crafting your media strategy.</p>
+                    <p style="color: #1a73e8;"><b> Schedule a meeting</b></p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="contact-form" class="container">
+            <!-- <h3 class="text-center">Request Infonrmation</h3> -->
+            <div class="row justify-content-center">
+                <div class="col-11 col-lg-6">
+                    <form action="mail3.php" method="POST" class="form text-center">
+                        <div class="mb-3 mt-3">
+                            <input name="name" type="text" class="form-control p-3 rounded-50"
+                                id="exampleFormControlInput1" placeholder="Full name" required>
+                        </div>
+                        <!-- <select name="dropdown" size="1" class="form-select col-12 mb-3 p-3 "
+                    aria-label="Default select example">
+                    <option class="text-secondary">Services</option>
+                    <option value="Piano">1</option>
+                    <option value="Voice">2</option>
+                    <option value="Violin">3</option>
+                    <option value="Cello">4</option>
+                    <option value="Guitar">5</option>
+                    <option value="Drum">6</option>
+                </select> -->
+                        <div class="mb-3">
+
+                            <input name="email" type="email" class="form-control p-3" id="exampleFormControlInput1"
+                                placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+
+                            <input name="mobileNo" type="text" class="form-control p-3" id="exampleFormControlInput1"
+                                placeholder="phone no." required>
+                        </div>
+                        <button type="submit" name="submit" class="btn-lg form-button text-white">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+    </div>
+    <br>
+
+
+
+    <footer style="font-family: Arial, Helvetica, sans-serif;">
+        <div class="container arial-font foot-font-size pt-1 pt-lg-4 mt-5">
+            <div class="row justify-content-evenly ">
+                <div class="col-12 col-lg-4 d-block icon-info">
+                    <img id="foot-logo" src="image/AdBigo logo.png" width="150px" height="60px" class=" mb-4" alt="">
+                    <p>We are the only full service Marketing Agency, that gives you reliable, cost-effective, and
+                        scalable solutions across a range of web development and digital marketing specializations. </p>
+
+                    <h5 class="mt-4 mt-lg-5 mb-lg-4"><b> Marketing Partners</b></h5>
+
+                    <div class="row  mt-3">
+                        <div class="col-4">
+                            <img src="image/google partner.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="image/microsoft part.png" class="img-fluid" alt="">
+
+                        </div>
+                        <div class="col-4">
+                            <img src="image/fb part.png" class="img-fluid" alt="">
+
+                        </div>
+                        <br><br><br>
+                        <div class="col-12 footer-icon mb-2 d-none d-lg-block ">
+                            <a href="https://www.facebook.com/rbrmuzik/"> <i class="bi bi-facebook p-1 "></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCA8V-uIfkL8SwNrrSTzxmfA"> <i
+                                    class="bi bi-youtube p-1"></i></a>
+                            <a
+                                href="https://www.instagram.com/rbrmuzik/?utm_source=ig_profile_share&igshid=1uuylct2kp4ti&hl=en">
+                                <i class="bi bi-instagram p-1"></i> </a>
+                            <a href="https://www.linkedin.com/company/rbr-muzik"> <i class="bi bi-linkedin p-1"></i>
+                            </a>
+                            <a href=""> <i class="bi bi-twitter text-white p-1"></i> </a>
+                            <a href="https://goo.gl/maps/L3XXRkxmN916BxXF8"> <i class="bi bi-geo-alt-fill  p-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class=" col-lg-4 d-block link-line ">
+
+                    <div class="row  ">
+                        <div class="col-6 ">
+                            <h5><b> Services</b></h5>
+                            <br>
+
+                            <a href="music.html">
+                                <p>SEO Service</p>
+                            </a>
+                            <a href="music.html">
+                                <p>SMM Service</p>
+                            </a>
+                            <a href="music.html">
+                                <p>PPC(adword) </p>
+                            </a>
+                            <a href="music.html">
+                                <p>Web Development</p>
+                            </a>
+
+                            <a href="music.html">
+                                <p>Landing pages</p>
+                            </a>
+                            <a href="music.html">
+                                <p>Graphics Design</p>
+                            </a>
+                            <a href="music.html">
+                                <p>Bulk Marketing</p>
+                            </a>
+                            <a href="music.html">
+                                <p>Video Editing</p>
+                            </a>
+
+
+                        </div>
+                        <div class="col-6 ">
+                            <h5><b> About Us</b></h5>
+                            <br>
+                            <a href="about.html">
+                                <p>Our Story </p>
+                            </a>
+                            <a href="music.html">
+                                <p>Our Team</p>
+                            </a>
+                            <a href="music.html">
+                                <p>Portfolio</p>
+                            </a>
+                            <a href="music.html">
+                                <p>Testimonials </p>
+                            </a>
+                            <a href="music.html">
+                                <p>Awards</p>
+                            </a>
+                            <a href="music.html">
+                                <p>Career </p>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 d-block locat01">
+                    <h5 class="mt-3 mt-lg-0"><b> Contact Us</b></h5>
+                    <br>
+                    <div>
+
+                        <h6><img src="image/india.jpg" width="25px" height="15px" alt=""> India</h6>
+
+                        <h6 class="footer-icon"><i class="bi bi-geo-alt-fill p-1 "></i> 12 no road near red fort </h6>
+
+                        <h6> <a href="" style="color: black;" class="footer-icon "><i
+                                    class="bi bi-telephone-fill p-1 "></i>
+                                (896) 684-7002</a></h6>
+                    </div>
+                    <br>
+                    <div>
+
+                        <h6><img src="image/america.jpg" width="25px" height="15px" alt=""> America</h6>
+                        <h6 class="footer-icon"><i class="bi bi-geo-alt-fill p-1 "></i> 3248 Skyway Circle </h6>
+
+                        <h6> <a href="" style="color: black;" class="footer-icon "><i
+                                    class="bi bi-telephone-fill p-1 "></i>
+                                (896) 684-7002</a></h6>
+                    </div>
+                    <br>
+
+
+                </div>
+            </div>
+
+            <hr class="mt-lg-4">
+            <div class="row mb-lg-2">
+                <div class="col-12 col-lg-4 d-lg-none footer-icon mb-2 order-lg-2  text-center ">
+                    <a href="https://www.facebook.com/rbrmuzik/"> <i class="bi bi-facebook rounded-circle p-1 "></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCA8V-uIfkL8SwNrrSTzxmfA"> <i
+                            class="bi bi-youtube rounded-circle p-1"></i></a>
+                    <a
+                        href="https://www.instagram.com/rbrmuzik/?utm_source=ig_profile_share&igshid=1uuylct2kp4ti&hl=en">
+                        <i class="bi bi-instagram rounded-circle p-1"></i> </a>
+                    <a href="https://www.linkedin.com/company/rbr-muzik"> <i
+                            class="bi bi-linkedin rounded-circle p-1"></i> </a>
+                    <a href=""> <i class="bi bi-twitter text-white rounded-circle p-1"></i> </a>
+                    <a href="https://goo.gl/maps/L3XXRkxmN916BxXF8"> <i
+                            class="bi bi-geo-alt-fill rounded-circle p-1"></i> </a>
+                </div>
+                <div class="col-12 col-lg-8  order-lg-1 rights ">
+                    <p>All Images & text property Copyright @2021 AdBigo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <br>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
+        </script>
+
+
+</body>
+
+</html>
